@@ -29,8 +29,8 @@ img{
     background-color: #333;
     padding: 10px;
     border-radius: 5px; 
-    /* display: block; 因為是超連結行內元素，所以轉成區塊元素，才可以設定寬高 */
-    text-align: center;    
+    display: block; /*因為是超連結行內元素，所以轉成區塊元素，才可以設定寬高*/
+    text-align: center;       
 }
 .card-text{
     margin-bottom: 20px;
