@@ -9,10 +9,13 @@ const TodoWrapper = () => {
     // 所以避免異動資料時造成索引值錯亂，將陣列改為陣列物件
     // 而key值用亂數來產生
 
+    // 因為要判定todo內容是否被點擊，所以增加一個isCompleted屬性
+    // 因為要判定todo是否修改，所以增加一個isEdit屬性
+
     const [todos, setTodos] = useState(
         [
-            { content: '繳停車費', id: Math.random(), isCompleted: false },
-            { content: '對發票', id: Math.random(), isCompleted: false },
+            { content: '繳停車費', id: Math.random(), isCompleted: false, isEdit: false },
+            { content: '對發票', id: Math.random(), isCompleted: false, isEdit: false },
         ]
     );
 
@@ -36,9 +39,25 @@ const TodoWrapper = () => {
                 ? { ...todo, isCompleted: !todo.isCompleted }
                 : todo
         }))
-
     }
 
+    // 建立切換isEdit屬性函式
+    const toggleIsEdit = (id) => {
+        setTodos(todos.map((todo) => {
+            return todo.id === id
+                ? { ...todo, isEdit: !todo.isEdit }
+                : todo
+        }))
+    }
+
+    // 建立修改todo函式
+    const editTodo = (id, editContent) => {
+        setTodos(todos.map((todo) => {
+            return todo.id === id
+                ? { ...todo, content: editContent, isEdit: false }
+                : todo
+        }))
+    }
 
     return (
         <div className='wrapper'>
@@ -57,7 +76,12 @@ const TodoWrapper = () => {
             */}
             {
                 todos.map((todo) => {
-                    return <Todo todo={todo} key={todo.id} delTodo={delTodo} toggleCompleted={toggleCompleted} />
+                    return <Todo todo={todo} key={todo.id}
+                        delTodo={delTodo}
+                        toggleCompleted={toggleCompleted}
+                        toggleIsEdit={toggleIsEdit}
+                        editTodo={editTodo}
+                    />
                 })
             }
 
