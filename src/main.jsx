@@ -6,7 +6,6 @@ import { HashRouter } from 'react-router-dom'
 // import './sass/all.scss'
 import App from './pages/App0826c-tooltip'
 
-
 createRoot(document.getElementById('root')).render(
   // 嚴謹模式
   <StrictMode>
