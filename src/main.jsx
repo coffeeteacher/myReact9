@@ -4,7 +4,7 @@ import { HashRouter } from 'react-router-dom'
 // import './index.css'
 // import App from './App.jsx'
 // import './sass/all.scss'
-import App from './pages/App0826c-tooltip'
+import App from './pages/App0902a'
 
 createRoot(document.getElementById('root')).render(
   // 嚴謹模式
