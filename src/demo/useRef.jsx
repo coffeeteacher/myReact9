@@ -42,25 +42,28 @@ function App() {
     return (
         <div>
             {/* 使用useState */}
-            <button onClick={handleClick}>+1</button>
+            {/* <button onClick={handleClick}>+1</button> */}
             <br />
 
             {/* 使用useRef */}
-            <button onClick={handleClick1}>
+            {/* <button onClick={handleClick1}>
                 Click me 1!
-            </button>
+            </button> */}
+            文字方塊1
             <input id='input1' ref={inputRef1} onFocus={handleClick1} />
             <br />
 
-            <button onClick={handleClick2}>
+            {/* <button onClick={handleClick2}>
                 Click me 2!
-            </button>
+            </button> */}
+            文字方塊2
             <input id='input2' ref={inputRef2} onFocus={handleClick2} />
             <br />
 
-            <button onClick={handleClick3}>
+            {/* <button onClick={handleClick3}>
                 Click me 3!
-            </button>
+            </button> */}
+            文字方塊3
             <input id='input3' ref={inputRef3} onFocus={handleClick3} />
             <br />
         </div>

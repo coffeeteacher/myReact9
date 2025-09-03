@@ -4,14 +4,14 @@ import { HashRouter } from 'react-router-dom'
 // import './index.css'
 // import App from './App.jsx'
 // import './sass/all.scss'
-// import App from './pages/App0902c-useContext'
-import App from './demo/useRef4'
+import App from './pages/App0903-useRef-7'
+// import App from './demo/useRef4'
 
 createRoot(document.getElementById('root')).render(
   // 嚴謹模式
-  <StrictMode>
+  // <StrictMode>
     <HashRouter>
       <App />
     </HashRouter>
-  </StrictMode>,
+  // </StrictMode>,
 )
