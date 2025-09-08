@@ -4,8 +4,8 @@ import { HashRouter } from 'react-router-dom'
 // import './index.css'
 // import App from './App.jsx'
 // import './sass/all.scss'
-// import App from './pages/App0903-useRef-7'
-import App from './demo/swiper'
+import App from './pages/App0908-Accordion'
+
 
 createRoot(document.getElementById('root')).render(
   // 嚴謹模式
