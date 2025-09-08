@@ -4,7 +4,7 @@ import { HashRouter } from 'react-router-dom'
 // import './index.css'
 // import App from './App.jsx'
 // import './sass/all.scss'
-import App from './pages/App0908-Accordion'
+import App from './pages/App0908-api-pexels'
 
 
 createRoot(document.getElementById('root')).render(
